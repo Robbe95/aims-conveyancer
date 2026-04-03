@@ -1,0 +1,46 @@
+{
+  "name": "aims-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint": "eslint .",
+    "typecheck": "nuxt typecheck",
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "test:unit": "vitest --project unit",
+    "test:nuxt": "vitest --project nuxt"
+  },
+  "dependencies": {
+    "@iconify-json/lucide": "^1.2.100",
+    "@iconify-json/simple-icons": "^1.2.75",
+    "@nuxt/a11y": "1.0.0-alpha.1",
+    "@nuxt/content": "3.12.0",
+    "@nuxt/hints": "1.0.3",
+    "@nuxt/image": "2.0.0",
+    "@nuxt/scripts": "0.13.2",
+    "@nuxt/test-utils": "4.0.0",
+    "@nuxt/ui": "^4.6.0",
+    "@nuxtjs/i18n": "10.2.4",
+    "@nuxtjs/seo": "5.1.0",
+    "@tailwindcss/vite": "^4.2.2",
+    "better-sqlite3": "^12.8.0",
+    "nuxt": "^4.4.2",
+    "nuxt-calendly": "0.1.21",
+    "tailwindcss": "^4.2.2"
+  },
+  "devDependencies": {
+    "@nuxt/eslint": "^1.15.2",
+    "@vitest/browser-playwright": "^4.1.2",
+    "@vue/test-utils": "^2.4.6",
+    "@wisemen/eslint-config-vue": "2.1.1",
+    "eslint": "^9.18.0",
+    "typescript": "^6.0.2",
+    "vitest": "^4.1.2",
+    "vue-tsc": "^3.2.6"
+  },
+  "packageManager": "pnpm@10.33.0"
+}
