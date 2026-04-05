@@ -1,7 +1,8 @@
 import { fileURLToPath } from 'node:url'
-import { defineConfig } from 'vitest/config'
+
 import { defineVitestProject } from '@nuxt/test-utils/config'
 import { playwright } from '@vitest/browser-playwright'
+import { defineConfig } from 'vitest/config'
 
 export default defineConfig({
   test: {
@@ -9,27 +10,33 @@ export default defineConfig({
       {
         test: {
           name: 'unit',
-          include: ['test/unit/*.{test,spec}.ts'],
           environment: 'node',
+          include: [
+            'test/unit/*.{test,spec}.ts',
+          ],
         },
       },
       await defineVitestProject({
         test: {
           name: 'nuxt',
-          include: ['test/nuxt/*.{test,spec}.ts'],
+          browser: {
+            enabled: true,
+            instances: [
+              {
+                browser: 'chromium',
+              },
+            ],
+            provider: playwright(),
+          },
           environment: 'nuxt',
           environmentOptions: {
             nuxt: {
               rootDir: fileURLToPath(new URL('.', import.meta.url)),
             },
           },
-          browser: {
-            enabled: true,
-            provider: playwright(),
-            instances: [
-              { browser: 'chromium' },
-            ],
-          },
+          include: [
+            'test/nuxt/*.{test,spec}.ts',
+          ],
         },
       }),
     ],

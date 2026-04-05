@@ -28,6 +28,7 @@
     "@nuxtjs/seo": "5.1.0",
     "@tailwindcss/vite": "^4.2.2",
     "better-sqlite3": "^12.8.0",
+    "motion-v": "^2.2.0",
     "nuxt": "^4.4.2",
     "nuxt-calendly": "0.1.21",
     "tailwindcss": "^4.2.2"

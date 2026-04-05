@@ -1,11 +1,63 @@
 <script setup lang="ts">
-import BackgroundImage from '~/components/background/BackgroundImage.vue'
-import ContentWrapper from '~/components/content-wrapper/ContentWrapper.vue'
+import ContentTitle from '~/components/content-title/ContentTitle.vue'
+
+const {
+  t,
+} = useI18n()
+
+const services = [
+  t('home.services.sales'),
+  t('home.services.first_time_buyers'),
+  t('home.services.remortgages'),
+  t('home.services.transfer_of_equity'),
+  t('home.services.updates'),
+]
 </script>
 
 <template>
-  <div class="relative flex h-screen w-screen items-center justify-center">
-    <BackgroundImage class="absolute top-0 left-0" />
-    <ContentWrapper />
-  </div>
+  <section class="space-y-6 text-white">
+    <ContentTitle
+      :title="t('home.title')"
+      :description="t('home.description')"
+    />
+
+    <p>
+      {{ t('home.intro') }}
+    </p>
+
+    <div class="space-y-2">
+      <h2 class="text-2xl font-semibold">
+        {{ t('home.services.heading') }}
+      </h2>
+      <ul class="list-disc space-y-1 pl-6">
+        <li
+          v-for="service in services"
+          :key="service"
+        >
+          {{ service }}
+        </li>
+      </ul>
+    </div>
+
+    <p>
+      {{ t('home.outro') }}
+    </p>
+
+    <p class="text-white/80">
+      <NuxtLink
+        class="underline"
+        to="/about"
+      >
+        {{ t('home.cta.about') }}
+      </NuxtLink>
+      {{ ` ${t('home.cta.join')} ` }}
+      <NuxtLink
+        class="underline"
+        to="/contact"
+      >
+        {{ t('home.cta.contact') }}
+      </NuxtLink>
+      {{ t('home.cta.end') }}
+    </p>
+  </section>
 </template>

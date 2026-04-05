@@ -1,5 +1,11 @@
 <script setup lang="ts">
 import {
+  AnimatePresence,
+  easeOut,
+  Motion,
+} from 'motion-v'
+
+import {
   useHead,
   useSeoMeta,
 } from '#app'
@@ -34,12 +40,53 @@ useSeoMeta({
   twitterCard: 'summary_large_image',
   twitterImage: 'https://ui.nuxt.com/assets/templates/nuxt/starter-light.png',
 })
+
+const pageInitial = {
+  filter: 'blur(8px)',
+  opacity: 0,
+  scale: 1,
+  y: 26,
+}
+
+const pageAnimate = {
+  filter: 'blur(0px)',
+  opacity: 1,
+  scale: 1,
+  y: 0,
+}
+
+const pageExit = {
+  filter: 'blur(4px)',
+  opacity: 0,
+  scale: 1.01,
+  y: -18,
+}
+
+const pageTransition = {
+  duration: 0.3,
+  ease: easeOut,
+}
 </script>
 
 <template>
   <UApp>
     <UMain>
-      <NuxtPage />
+      <NuxtLayout>
+        <NuxtPage v-slot="{ Component, route }">
+          <AnimatePresence mode="popLayout">
+            <Motion
+              :key="route.path"
+              :initial="pageInitial"
+              :animate="pageAnimate"
+              :exit="pageExit"
+              :transition="pageTransition"
+              class="will-change-transform"
+            >
+              <component :is="Component" />
+            </Motion>
+          </AnimatePresence>
+        </NuxtPage>
+      </NuxtLayout>
     </UMain>
   </UApp>
 </template>

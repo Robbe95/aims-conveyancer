@@ -30,16 +30,10 @@ export default defineNuxtConfig({
     langDir: 'locales',
     locales: [
       {
-        iso: 'en-US',
+        iso: 'en-GB',
         code: 'en',
         file: 'en.json',
-        language: 'en-US',
-      },
-      {
-        iso: 'nl-BE',
-        code: 'nl',
-        file: 'nl.json',
-        language: 'nl-BE',
+        language: 'en-GB',
       },
     ],
     strategy: 'prefix',
@@ -57,6 +51,8 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
     '@nuxtjs/seo',
     'nuxt-calendly',
+    'motion-v/nuxt',
+
   ],
   routeRules: {
     '/': {
