@@ -5,6 +5,7 @@ interface Props {
   title: string
   description: string
 }
+
 const props = defineProps<Props>()
 </script>
 

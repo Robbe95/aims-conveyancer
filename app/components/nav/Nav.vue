@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Divider from '../divider/Divider.vue'
+import UIDivider from '../ui/UIDivider.vue'
 import NavLink from './NavLink.vue'
 import NavMeeting from './NavMeeting.vue'
 import NavSocials from './NavSocials.vue'
@@ -16,28 +16,28 @@ const {
       lg:w-[320px]
     "
   >
-    <Divider />
+    <UIDivider />
     <NavLink
       :title="t('nav.home')"
       to="index"
       icon="material-symbols:family-home-rounded"
       description="Go to the home page"
     />
-    <Divider />
+    <UIDivider />
     <NavLink
       :title="t('nav.about')"
       to="about"
       icon="material-symbols:person-rounded"
       description="Learn more about me and my work"
     />
-    <Divider />
+    <UIDivider />
     <NavLink
       :title="t('nav.contact')"
       to="contact"
       icon="material-symbols:calendar-add-on-rounded"
       description="Get in touch with me"
     />
-    <Divider />
+    <UIDivider />
     <NavMeeting />
     <NavSocials />
   </div>

@@ -1,5 +1,10 @@
 <script setup lang="ts">
-import ContentTitle from '~/components/content-title/ContentTitle.vue'
+import UIColumn from '~/components/ui/UIColumn.vue'
+import UIContentTitle from '~/components/ui/UIContentTitle.vue'
+import UIList from '~/components/ui/UIList.vue'
+import UIRow from '~/components/ui/UIRow.vue'
+import UISubtitle from '~/components/ui/UISubtitle.vue'
+import UIText from '~/components/ui/UIText.vue'
 
 const {
   t,
@@ -14,47 +19,58 @@ const values = [
 </script>
 
 <template>
-  <section class="flex flex-col gap-6 text-white">
-    <ContentTitle
+  <UIColumn
+    tag="section"
+    gap="6"
+    class="text-white"
+  >
+    <UIContentTitle
       :title="t('about.title')"
       :description="t('about.description')"
     />
 
-    <div
+    <UIRow
+      gap="6"
       class="
-        flex flex-col gap-6
+        flex-col
         lg:flex-row
       "
     >
-      <div class="flex flex-col gap-6 text-white">
-        <p>
+      <UIColumn
+        gap="6"
+        class="text-white"
+      >
+        <UIText>
           {{ t('about.intro') }}
-        </p>
+        </UIText>
 
-        <div class="space-y-2">
-          <h2 class="text-2xl font-semibold">
+        <UIColumn gap="2">
+          <UISubtitle>
             {{ t('about.values.heading') }}
-          </h2>
-          <ul class="list-disc space-y-1 pl-6">
+          </UISubtitle>
+          <UIList gap="1">
             <li
               v-for="value in values"
               :key="value"
             >
               {{ value }}
             </li>
-          </ul>
-        </div>
+          </UIList>
+        </UIColumn>
 
-        <p>
+        <UIText>
           {{ t('about.outro') }}
-        </p>
+        </UIText>
 
-        <div class="space-y-3">
-          <p class="text-white/80">
+        <UIColumn gap="3">
+          <UIText tone="muted">
             {{ t('about.cta.contact') }}
-          </p>
+          </UIText>
 
-          <div class="flex flex-wrap gap-3">
+          <UIRow
+            gap="3"
+            class="flex-wrap"
+          >
             <UButton
               :to="localeRoute('contact')"
               color="primary"
@@ -64,9 +80,9 @@ const values = [
             >
               {{ t('about.cta.contact_button') }}
             </UButton>
-          </div>
-        </div>
-      </div>
+          </UIRow>
+        </UIColumn>
+      </UIColumn>
       <div>
         <NuxtImg
           src="/me.jpg"
@@ -74,6 +90,6 @@ const values = [
           class="size-auto max-w-sm rounded-lg object-contain"
         />
       </div>
-    </div>
-  </section>
+    </UIRow>
+  </UIColumn>
 </template>

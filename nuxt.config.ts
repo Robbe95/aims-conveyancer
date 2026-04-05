@@ -72,9 +72,10 @@ export default defineNuxtConfig({
     enabled: false,
   },
   routeRules: {
-    '/': {
+    '/**': {
       prerender: true,
     },
+
   },
   typescript: {
     tsConfig: {

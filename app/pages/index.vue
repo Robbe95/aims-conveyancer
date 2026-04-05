@@ -1,5 +1,9 @@
 <script setup lang="ts">
-import ContentTitle from '~/components/content-title/ContentTitle.vue'
+import UIColumn from '~/components/ui/UIColumn.vue'
+import UIContentTitle from '~/components/ui/UIContentTitle.vue'
+import UIList from '~/components/ui/UIList.vue'
+import UISubtitle from '~/components/ui/UISubtitle.vue'
+import UIText from '~/components/ui/UIText.vue'
 
 const {
   t,
@@ -15,35 +19,39 @@ const services = [
 </script>
 
 <template>
-  <section class="space-y-6 text-white">
-    <ContentTitle
+  <UIColumn
+    tag="section"
+    gap="6"
+    class="text-white"
+  >
+    <UIContentTitle
       :title="t('home.title')"
       :description="t('home.description')"
     />
 
-    <p>
+    <UIText>
       {{ t('home.intro') }}
-    </p>
+    </UIText>
 
-    <div class="space-y-2">
-      <h2 class="text-2xl font-semibold">
+    <UIColumn gap="2">
+      <UISubtitle>
         {{ t('home.services.heading') }}
-      </h2>
-      <ul class="list-disc space-y-1 pl-6">
+      </UISubtitle>
+      <UIList gap="1">
         <li
           v-for="service in services"
           :key="service"
         >
           {{ service }}
         </li>
-      </ul>
-    </div>
+      </UIList>
+    </UIColumn>
 
-    <p>
+    <UIText>
       {{ t('home.outro') }}
-    </p>
+    </UIText>
 
-    <p class="text-white/80">
+    <UIText tone="muted">
       <NuxtLink
         class="underline"
         to="/about"
@@ -58,6 +66,6 @@ const services = [
         {{ t('home.cta.contact') }}
       </NuxtLink>
       {{ t('home.cta.end') }}
-    </p>
-  </section>
+    </UIText>
+  </UIColumn>
 </template>

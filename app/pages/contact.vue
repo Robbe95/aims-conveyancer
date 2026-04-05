@@ -1,6 +1,10 @@
 <script setup lang="ts">
-import ContentTitle from '~/components/content-title/ContentTitle.vue'
 import MeetingButton from '~/components/meeting-button/MeetingButton.vue'
+import UIColumn from '~/components/ui/UIColumn.vue'
+import UIContentTitle from '~/components/ui/UIContentTitle.vue'
+import UIRow from '~/components/ui/UIRow.vue'
+import UISubtitle from '~/components/ui/UISubtitle.vue'
+import UIText from '~/components/ui/UIText.vue'
 import {
   FACEBOOK_URL,
   INSTAGRAM_URL,
@@ -13,15 +17,19 @@ const {
 </script>
 
 <template>
-  <section class="flex flex-col gap-4 text-white">
-    <ContentTitle
+  <UIColumn
+    tag="section"
+    gap="4"
+    class="text-white"
+  >
+    <UIContentTitle
       :title="t('contact.title')"
       :description="t('contact.description')"
     />
 
-    <p class="text-white/85">
+    <UIText tone="soft">
       {{ t('contact.intro') }}
-    </p>
+    </UIText>
 
     <div
       class="
@@ -46,10 +54,13 @@ const {
     </div>
 
     <div class="rounded-xl border border-white/20 bg-black/20 p-5">
-      <h2 class="mb-3 text-xl font-semibold">
+      <UISubtitle class="mb-3 text-xl">
         {{ t('contact.socials.heading') }}
-      </h2>
-      <div class="flex flex-wrap gap-3">
+      </UISubtitle>
+      <UIRow
+        gap="3"
+        class="flex-wrap"
+      >
         <UButton
           :to="FACEBOOK_URL"
           target="_blank"
@@ -75,7 +86,7 @@ const {
         >
           {{ t('contact.socials.instagram') }}
         </UButton>
-      </div>
+      </UIRow>
     </div>
-  </section>
+  </UIColumn>
 </template>
