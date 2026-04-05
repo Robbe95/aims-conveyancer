@@ -1,8 +1,22 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import tailwindcss from '@tailwindcss/vite'
 
+import { cryptoUuidPolyfillScript } from './app/utils/cryptoUuidPolyfillScript'
+
 export default defineNuxtConfig({
   compatibilityDate: '2025-01-15',
+
+  app: {
+    head: {
+      script: [
+        {
+          id: 'crypto-uuid-polyfill-early',
+          innerHTML: cryptoUuidPolyfillScript,
+          tagPosition: 'head',
+        },
+      ],
+    },
+  },
 
   components: [],
 
@@ -54,12 +68,14 @@ export default defineNuxtConfig({
     'motion-v/nuxt',
 
   ],
+  ogImage: {
+    enabled: false,
+  },
   routeRules: {
     '/': {
       prerender: true,
     },
   },
-
   typescript: {
     tsConfig: {
       include: [

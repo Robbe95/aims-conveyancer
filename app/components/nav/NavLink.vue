@@ -15,9 +15,10 @@ const props = defineProps<Props>()
   <NuxtLinkLocale
     :to="props.to"
     class="
-      group flex items-center justify-between rounded-lg px-2 py-1 text-lg
+      group flex items-center justify-between rounded-lg p-3 text-base
       duration-200
       hover:bg-slate-900
+      sm:text-lg
     "
     active-class="text-primary"
     inactive-class="text-white data-active"
@@ -33,7 +34,12 @@ const props = defineProps<Props>()
           {{ props.title }}
         </p>
 
-        <p class="text-sm text-stone-400">
+        <p
+          class="
+            hidden text-sm text-stone-400
+            sm:block
+          "
+        >
           {{ props.description }}
         </p>
       </div>
@@ -43,8 +49,9 @@ const props = defineProps<Props>()
           'opacity-100': isActive,
         }"
         class="
-          opacity-0 duration-200
+          opacity-100 duration-200
           group-hover:opacity-100
+          sm:opacity-0
         "
       />
     </template>

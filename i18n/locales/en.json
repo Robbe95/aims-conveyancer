@@ -35,5 +35,8 @@
   "nav.about": "Me",
   "nav.contact": "Contact",
   "nav.home": "Home",
-  "nav.schedule_a_meeting": "Schedule a meeting"
+  "nav.schedule_a_meeting": "Schedule a meeting",
+  "nav.socials.link_to_facebook": "Link to facebook",
+  "nav.socials.link_to_instagram": "Link to instagram",
+  "nav.socials.link_to_whatsapp": "Link to whatsapp"
 }

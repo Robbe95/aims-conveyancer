@@ -39,9 +39,9 @@ const {
         variant="solid"
         trailing-icon="ic:baseline-whatsapp"
       >
-        <div class="flex w-full items-center justify-center">
+        <span class="flex w-full items-center justify-center">
           {{ t('contact.cta.whatsapp') }}
-        </div>
+        </span>
       </UButton>
     </div>
 

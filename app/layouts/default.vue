@@ -4,7 +4,12 @@ import ContentWrapper from '~/components/content-wrapper/ContentWrapper.vue'
 </script>
 
 <template>
-  <div class="relative flex h-screen w-screen items-center justify-center">
+  <div
+    class="
+      relative flex min-h-dvh w-full items-stretch justify-center
+      lg:h-screen lg:items-center
+    "
+  >
     <BackgroundImage class="absolute top-0 left-0" />
     <ContentWrapper>
       <slot />

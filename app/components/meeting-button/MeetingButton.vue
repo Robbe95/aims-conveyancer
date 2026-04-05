@@ -20,8 +20,8 @@ function openCalendly(): void {
     size="lg"
     @click="openCalendly"
   >
-    <div class="flex w-full items-center justify-center">
+    <span class="flex w-full items-center justify-center">
       {{ t('nav.schedule_a_meeting') }}
-    </div>
+    </span>
   </UButton>
 </template>

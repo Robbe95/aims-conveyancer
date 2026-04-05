@@ -10,7 +10,12 @@ const {
 </script>
 
 <template>
-  <div class="flex min-w-sm flex-col gap-2">
+  <div
+    class="
+      flex w-full flex-col gap-2
+      lg:w-[320px]
+    "
+  >
     <Divider />
     <NavLink
       :title="t('nav.home')"
