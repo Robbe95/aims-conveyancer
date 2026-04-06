@@ -21,7 +21,7 @@ const isMobileMenuOpen = ref(false)
   >
     <template #body>
       <div
-        class="h-full bg-gray-900/80 p-4 backdrop-blur-xl"
+        class="h-full bg-gray-900/80 backdrop-blur-xl"
       >
         <NavMobile />
       </div>
