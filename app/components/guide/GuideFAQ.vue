@@ -1,3 +1,4 @@
+<!-- eslint-disable @intlify/vue-i18n/no-dynamic-keys -->
 <script setup lang="ts">
 import MotionSlideUp from '~/components/motion/MotionSlideUp.vue'
 import UIColumn from '~/components/ui/UIColumn.vue'
@@ -43,7 +44,7 @@ const faqItems = Array.from({
         <template #content="{ item }">
           <UIText
             tone="muted"
-            class="ml-1 border-l-2 border-primary-500/50 pl-2"
+            class="mb-4 ml-1 border-l-2 border-primary-500/50 pl-2"
           >
             {{ item.content }}
           </UIText>
