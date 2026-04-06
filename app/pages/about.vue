@@ -20,24 +20,20 @@ const values = [
 </script>
 
 <template>
-  <section
+  <UIColumn
     tag="section"
     gap="6"
-    class="
-      flex flex-col gap-6 text-white
-      lg:flex-row
-    "
   >
     <UIContentTitle
       :title="t('about.title')"
       :description="t('about.description')"
     />
 
-    <UIRow
+    <UIColumn
       gap="6"
       class="
-        flex-col!
-        lg:flex-row
+        flex-col
+        lg:flex-row!
       "
     >
       <UIColumn
@@ -101,9 +97,12 @@ const values = [
         <NuxtImg
           src="/me.jpg"
           alt="Picture of Aimee Summers, conveyancer"
-          class="relative size-auto w-full max-w-sm rounded-lg object-contain"
+          class="
+            relative size-auto w-full rounded-lg object-contain
+            lg:min-w-sm
+          "
         />
       </MotionSlideUp>
-    </UIRow>
-  </section>
+    </UIColumn>
+  </UIColumn>
 </template>

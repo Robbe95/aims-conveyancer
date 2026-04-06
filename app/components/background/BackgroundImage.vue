@@ -42,7 +42,7 @@ onMounted(() => {
     "
   >
     <NuxtImg
-      src="/bg.jpg"
+      src="/bg-2.jpg"
       alt=""
       class="absolute inset-0 z-0 size-full object-cover opacity-80"
     />
