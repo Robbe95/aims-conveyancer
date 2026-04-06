@@ -1,7 +1,7 @@
 <script setup lang="ts">
+import MotionSlideUp from '~/components/motion/MotionSlideUp.vue'
 import UIColumn from '~/components/ui/UIColumn.vue'
 import UIContentTitle from '~/components/ui/UIContentTitle.vue'
-import UIList from '~/components/ui/UIList.vue'
 import UISubtitle from '~/components/ui/UISubtitle.vue'
 import UIText from '~/components/ui/UIText.vue'
 
@@ -24,48 +24,70 @@ const services = [
     gap="6"
     class="text-white"
   >
-    <UIContentTitle
-      :title="t('home.title')"
-      :description="t('home.description')"
-    />
+    <MotionSlideUp :delay="0.05">
+      <UIContentTitle
+        :title="t('home.title')"
+        :description="t('home.description')"
+      />
+    </MotionSlideUp>
 
-    <UIText>
-      {{ t('home.intro') }}
-    </UIText>
+    <MotionSlideUp :delay="0.15">
+      <UIText>
+        {{ t('home.intro') }}
+      </UIText>
+    </MotionSlideUp>
 
     <UIColumn gap="2">
-      <UISubtitle>
-        {{ t('home.services.heading') }}
-      </UISubtitle>
-      <UIList gap="1">
-        <li
-          v-for="service in services"
+      <MotionSlideUp :delay="0.25">
+        <UISubtitle>
+          {{ t('home.services.heading') }}
+        </UISubtitle>
+      </MotionSlideUp>
+      <ul class="flex list-none flex-col gap-2 pl-0">
+        <MotionSlideUp
+          v-for="(service, index) in services"
           :key="service"
+          :delay="0.3 + index * 0.07"
+          tag="li"
+          class="flex items-center gap-3"
         >
-          {{ service }}
-        </li>
-      </UIList>
+          <span class="flex size-2 shrink-0 rounded-full bg-primary" />
+          <span>{{ service }}</span>
+        </MotionSlideUp>
+      </ul>
     </UIColumn>
 
-    <UIText>
-      {{ t('home.outro') }}
-    </UIText>
+    <MotionSlideUp :delay="0.65">
+      <UIText>
+        {{ t('home.outro') }}
+      </UIText>
+    </MotionSlideUp>
 
-    <UIText tone="muted">
-      <NuxtLink
-        class="underline"
-        to="/about"
-      >
-        {{ t('home.cta.about') }}
-      </NuxtLink>
-      {{ ` ${t('home.cta.join')} ` }}
-      <NuxtLink
-        class="underline"
-        to="/contact"
-      >
-        {{ t('home.cta.contact') }}
-      </NuxtLink>
-      {{ t('home.cta.end') }}
-    </UIText>
+    <MotionSlideUp :delay="0.75">
+      <UIText tone="muted">
+        <NuxtLink
+          class="
+            underline decoration-primary/50 underline-offset-4 transition-colors
+            duration-300
+            hover:decoration-primary
+          "
+          to="/about"
+        >
+          {{ t('home.cta.about') }}
+        </NuxtLink>
+        {{ ` ${t('home.cta.join')} ` }}
+        <NuxtLink
+          class="
+            underline decoration-primary/50 underline-offset-4 transition-colors
+            duration-300
+            hover:decoration-primary
+          "
+          to="/contact"
+        >
+          {{ t('home.cta.contact') }}
+        </NuxtLink>
+        {{ t('home.cta.end') }}
+      </UIText>
+    </MotionSlideUp>
   </UIColumn>
 </template>

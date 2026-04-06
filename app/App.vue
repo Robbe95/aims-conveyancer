@@ -28,17 +28,15 @@ useHead({
   ],
 })
 
-const title = 'Nuxt Starter Template'
-const description = 'A production-ready starter template powered by Nuxt UI. Build beautiful, accessible, and performant applications in minutes, not hours.'
+const title = 'Aimee Summers | UK Conveyancing'
+const description = 'Friendly, reliable UK conveyancing support from offer to completion. Clear communication, careful legal work, and honest timelines.'
 
 useSeoMeta({
   title,
   description,
   ogDescription: description,
-  ogImage: 'https://ui.nuxt.com/assets/templates/nuxt/starter-light.png',
   ogTitle: title,
   twitterCard: 'summary_large_image',
-  twitterImage: 'https://ui.nuxt.com/assets/templates/nuxt/starter-light.png',
 })
 
 const pageInitial = {

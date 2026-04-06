@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Nav from './Nav.vue'
+import NavMobile from './NavMobile.vue'
 
 const isMobileMenuOpen = ref(false)
 </script>
@@ -23,7 +23,7 @@ const isMobileMenuOpen = ref(false)
       <div
         class="h-full bg-gray-900/80 p-4 backdrop-blur-xl"
       >
-        <Nav />
+        <NavMobile />
       </div>
     </template>
   </UDrawer>

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import MotionFadeIn from '../motion/MotionFadeIn.vue'
 import UIDivider from '../ui/UIDivider.vue'
 import NavLink from './NavLink.vue'
 import NavMeeting from './NavMeeting.vue'
@@ -16,29 +17,47 @@ const {
       lg:w-[320px]
     "
   >
-    <UIDivider />
-    <NavLink
-      :title="t('nav.home')"
-      to="index"
-      icon="material-symbols:family-home-rounded"
-      description="Go to the home page"
-    />
-    <UIDivider />
-    <NavLink
-      :title="t('nav.about')"
-      to="about"
-      icon="material-symbols:person-rounded"
-      description="Learn more about me and my work"
-    />
-    <UIDivider />
-    <NavLink
-      :title="t('nav.contact')"
-      to="contact"
-      icon="material-symbols:calendar-add-on-rounded"
-      description="Get in touch with me"
-    />
-    <UIDivider />
-    <NavMeeting />
-    <NavSocials />
+    <MotionFadeIn :delay="0.1">
+      <UIDivider />
+    </MotionFadeIn>
+    <MotionFadeIn :delay="0.15">
+      <NavLink
+        :title="t('nav.home')"
+        to="index"
+        icon="material-symbols:family-home-rounded"
+        description="Reliable UK conveyancing"
+      />
+    </MotionFadeIn>
+    <MotionFadeIn :delay="0.2">
+      <UIDivider />
+    </MotionFadeIn>
+    <MotionFadeIn :delay="0.25">
+      <NavLink
+        :title="t('nav.about')"
+        to="about"
+        icon="material-symbols:person-rounded"
+        description="Learn more about me and my work"
+      />
+    </MotionFadeIn>
+    <MotionFadeIn :delay="0.3">
+      <UIDivider />
+    </MotionFadeIn>
+    <MotionFadeIn :delay="0.35">
+      <NavLink
+        :title="t('nav.contact')"
+        to="contact"
+        icon="material-symbols:calendar-add-on-rounded"
+        description="Get in touch with me"
+      />
+    </MotionFadeIn>
+    <MotionFadeIn :delay="0.4">
+      <UIDivider />
+    </MotionFadeIn>
+    <MotionFadeIn :delay="0.5">
+      <NavMeeting />
+    </MotionFadeIn>
+    <MotionFadeIn :delay="0.6">
+      <NavSocials />
+    </MotionFadeIn>
   </div>
 </template>
