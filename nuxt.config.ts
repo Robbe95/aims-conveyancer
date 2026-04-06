@@ -64,6 +64,7 @@ export default defineNuxtConfig({
     '@nuxt/a11y',
     '@nuxtjs/i18n',
     '@nuxtjs/seo',
+    '@nuxt/fonts',
     'nuxt-calendly',
     'motion-v/nuxt',
 

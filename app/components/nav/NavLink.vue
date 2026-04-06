@@ -36,7 +36,7 @@ const props = defineProps<Props>()
 
         <p
           class="
-            hidden text-sm text-stone-400
+            hidden text-sm text-neutral-400
             sm:block
           "
         >

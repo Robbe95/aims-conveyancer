@@ -13,8 +13,8 @@ import Nav from '../nav/Nav.vue'
   >
     <div
       class="
-        custom-card-glow h-full min-h-0 grid-cols-1 gap-6 rounded-2xl border
-        border-white/10 bg-gray-800/50 p-4 backdrop-blur-md
+        custom-card-glow h-full min-h-0 grid-cols-1 gap-6 rounded-2xl
+        bg-neutral-950/50 p-4 backdrop-blur-md
         sm:p-6
         lg:grid lg:grid-cols-[minmax(0,1fr)_320px] lg:gap-8 lg:p-10
       "
