@@ -38,7 +38,7 @@ const terminologyItems = Array.from({
 
       <div
         class="
-          grid grid-cols-1 gap-5
+          grid grid-cols-1 gap-2
           md:grid-cols-2
           lg:grid-cols-3
         "
