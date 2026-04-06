@@ -20,22 +20,23 @@ const values = [
 </script>
 
 <template>
-  <UIColumn
+  <section
     tag="section"
     gap="6"
-    class="text-white"
+    class="
+      flex flex-col gap-6 text-white
+      lg:flex-row
+    "
   >
-    <MotionSlideUp :delay="0.05">
-      <UIContentTitle
-        :title="t('about.title')"
-        :description="t('about.description')"
-      />
-    </MotionSlideUp>
+    <UIContentTitle
+      :title="t('about.title')"
+      :description="t('about.description')"
+    />
 
     <UIRow
       gap="6"
       class="
-        flex-col
+        flex-col!
         lg:flex-row
       "
     >
@@ -97,15 +98,12 @@ const values = [
       </UIColumn>
 
       <MotionSlideUp :delay="0.3">
-        <div class="relative">
-          <div class="absolute -inset-1 rounded-xl bg-primary/20 blur-xl" />
-          <NuxtImg
-            src="/me.jpg"
-            alt="Picture of Aimee Summers, conveyancer"
-            class="relative size-auto max-w-sm rounded-lg object-contain"
-          />
-        </div>
+        <NuxtImg
+          src="/me.jpg"
+          alt="Picture of Aimee Summers, conveyancer"
+          class="relative size-auto w-full max-w-sm rounded-lg object-contain"
+        />
       </MotionSlideUp>
     </UIRow>
-  </UIColumn>
+  </section>
 </template>
