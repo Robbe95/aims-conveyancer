@@ -38,6 +38,13 @@ const {
       description="Get in touch with me"
     />
     <UIDivider />
+    <NavLink
+      :title="t('nav.guide')"
+      :description="t('nav.guide_description')"
+      to="guide"
+      icon="material-symbols:book-2-rounded"
+    />
+    <UIDivider />
     <NavMeeting />
     <NavSocials />
   </div>

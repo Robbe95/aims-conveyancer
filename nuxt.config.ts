@@ -67,7 +67,7 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
     'nuxt-calendly',
     'motion-v/nuxt',
-
+    '@vueuse/nuxt',
   ],
   ogImage: {
     enabled: false,

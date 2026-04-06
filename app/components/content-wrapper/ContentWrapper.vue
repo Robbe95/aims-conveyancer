@@ -1,13 +1,23 @@
 <script setup lang="ts">
+import { useScroll } from '@vueuse/core'
+
 import Nav from '../nav/Nav.vue'
+
+const contentElement = useTemplateRef('content')
+
+const scroll = useScroll(contentElement)
+
+provide('scroll', {
+  isTop: computed(() => scroll.y.value === 0),
+})
 </script>
 
 <template>
   <div
     class="
-      z-20 min-h-dvh w-full p-4
+      z-20 h-screen min-h-dvh w-full p-4
       sm:p-6
-      lg:h-screen lg:px-16 lg:py-10
+      lg:px-16 lg:py-10
       xl:px-24 xl:py-14
     "
   >
@@ -19,7 +29,10 @@ import Nav from '../nav/Nav.vue'
         lg:grid lg:grid-cols-[minmax(0,1fr)_320px] lg:gap-8 lg:p-10
       "
     >
-      <div class="relative min-h-0 overflow-y-auto rounded-xl pr-1">
+      <div
+        ref="content"
+        class="relative h-full overflow-y-auto rounded-xl pr-1"
+      >
         <slot />
       </div>
 

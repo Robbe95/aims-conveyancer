@@ -7,10 +7,22 @@ interface Props {
 }
 
 const props = defineProps<Props>()
+
+const scroll = inject('scroll') as {
+  isTop: Ref<boolean>
+}
+
+const isTop = computed<boolean>(() => scroll.isTop.value)
 </script>
 
 <template>
-  <header class="space-y-2">
+  <header
+    :class="{
+      'bg-neutral-950/80 px-2': !isTop,
+      'bg-transparent': isTop,
+    }"
+    class="sticky top-0 z-50 rounded-md py-1 backdrop-blur-lg duration-200"
+  >
     <div class="flex items-start justify-between gap-3">
       <h1
         class="
@@ -22,7 +34,10 @@ const props = defineProps<Props>()
         {{ props.title }}
       </h1>
 
-      <NavMobileMenu />
+      <div class="flex items-center gap-2">
+        <slot name="actions" />
+        <NavMobileMenu />
+      </div>
     </div>
 
     <p>

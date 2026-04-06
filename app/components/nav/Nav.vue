@@ -53,10 +53,21 @@ const {
     <MotionFadeIn :delay="0.4">
       <UIDivider />
     </MotionFadeIn>
+    <MotionFadeIn :delay="0.45">
+      <NavLink
+        :title="t('nav.guide')"
+        :description="t('nav.guide_description')"
+        to="guide"
+        icon="material-symbols:book-2-rounded"
+      />
+    </MotionFadeIn>
     <MotionFadeIn :delay="0.5">
+      <UIDivider />
+    </MotionFadeIn>
+    <MotionFadeIn :delay="0.55">
       <NavMeeting />
     </MotionFadeIn>
-    <MotionFadeIn :delay="0.6">
+    <MotionFadeIn :delay="0.65">
       <NavSocials />
     </MotionFadeIn>
   </div>

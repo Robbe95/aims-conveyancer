@@ -8,7 +8,7 @@ const isMobileMenuOpen = ref(false)
   <UButton
     class="lg:hidden"
     color="neutral"
-    variant="soft"
+    variant="outline"
     size="lg"
     icon="lucide:menu"
     aria-label="Open menu"
