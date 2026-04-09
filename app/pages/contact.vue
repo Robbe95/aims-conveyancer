@@ -16,6 +16,16 @@ import {
 const {
   t,
 } = useI18n()
+
+useSeoMeta({
+  title: t('contact.title'),
+  description: t('contact.description'),
+})
+
+defineOgImage('MyOgImageTakumi', {
+  title: t('contact.title'),
+  description: t('contact.description'),
+})
 </script>
 
 <template>
@@ -38,10 +48,18 @@ const {
     </MotionSlideUp>
 
     <div
-      class="flex gap-2"
+      class="
+        flex flex-col gap-2
+        md:flex-row
+      "
     >
       <MotionScaleIn :delay="0.25">
-        <MeetingButton />
+        <MeetingButton
+          class="
+            w-full
+            md:w-auto
+          "
+        />
       </MotionScaleIn>
 
       <MotionScaleIn :delay="0.35">
@@ -52,7 +70,10 @@ const {
           color="neutral"
           size="lg"
           variant="solid"
-          class="text-center"
+          class="
+            w-full text-center
+            md:w-auto
+          "
           trailing-icon="ic:baseline-whatsapp"
         >
           <span class="flex w-full items-center justify-center">

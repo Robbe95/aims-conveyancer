@@ -1,6 +1,13 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import tailwindcss from '@tailwindcss/vite'
 
+import {
+  EMAIL_ADDRESS,
+  FACEBOOK_URL,
+  INSTAGRAM_URL,
+  SITE_URL,
+  WHATSAPP_URL,
+} from './app/constants/socials.constant'
 import { cryptoUuidPolyfillScript } from './app/utils/cryptoUuidPolyfillScript'
 
 export default defineNuxtConfig({
@@ -32,7 +39,7 @@ export default defineNuxtConfig({
     typedPages: true,
   },
   i18n: {
-    baseUrl: 'https://example.com',
+    baseUrl: 'https://aimeesummers.co.uk',
     defaultLocale: 'en',
     detectBrowserLanguage: {
       redirectOn: 'all',
@@ -52,7 +59,6 @@ export default defineNuxtConfig({
     ],
     strategy: 'prefix',
   },
-
   modules: [
     '@nuxt/eslint',
     '@nuxt/ui',
@@ -69,14 +75,57 @@ export default defineNuxtConfig({
     'motion-v/nuxt',
     '@vueuse/nuxt',
   ],
+
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      routes: [
+        '/',
+        '/about',
+        '/contact',
+        '/guide',
+      ],
+    },
+
+  },
   ogImage: {
-    enabled: false,
+    enabled: true,
+    zeroRuntime: true,
   },
   routeRules: {
     '/**': {
       prerender: true,
     },
-
+  },
+  schemaOrg: {
+    identity: {
+      name: 'Aimee Summers',
+      email: EMAIL_ADDRESS,
+      image: `${SITE_URL}/me.jpg`,
+      jobTitle: 'Conveyancer',
+      sameAs: [
+        FACEBOOK_URL,
+        INSTAGRAM_URL,
+        WHATSAPP_URL,
+      ],
+      type: 'Person',
+      url: SITE_URL,
+      worksFor: {
+        name: 'Hudson Conveyancing',
+        type: 'Organization',
+      },
+    },
+  },
+  site: {
+    name: 'Aimee Summers | UK Conveyancing',
+    defaultLocale: 'en-GB',
+    description: 'Friendly, reliable UK conveyancing support from offer to completion. Clear communication, careful legal work, and honest timelines.',
+    indexable: true,
+    trailingSlash: false,
+    url: 'https://aimeesummers.co.uk',
+  },
+  sitemap: {
+    zeroRuntime: true,
   },
   typescript: {
     tsConfig: {

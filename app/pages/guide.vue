@@ -6,6 +6,20 @@ import GuideTabs from '~/components/guide/GuideTabs.vue'
 import GuideTerminology from '~/components/guide/GuideTerminology.vue'
 import MotionSlideUp from '~/components/motion/MotionSlideUp.vue'
 import UIColumn from '~/components/ui/UIColumn.vue'
+
+const {
+  t,
+} = useI18n()
+
+useSeoMeta({
+  title: t('guide.title'),
+  description: t('guide.description'),
+})
+
+defineOgImage('MyOgImageTakumi', {
+  title: t('guide.title'),
+  description: t('guide.description'),
+})
 </script>
 
 <template>

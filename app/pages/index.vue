@@ -9,6 +9,16 @@ const {
   t,
 } = useI18n()
 
+useSeoMeta({
+  title: t('home.title'),
+  description: t('home.description'),
+})
+
+defineOgImage('MyOgImageTakumi', {
+  title: t('home.title'),
+  description: t('home.description'),
+})
+
 const services = [
   t('home.services.sales'),
   t('home.services.first_time_buyers'),

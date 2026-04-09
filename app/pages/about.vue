@@ -12,6 +12,16 @@ const {
 } = useI18n()
 const localeRoute = useLocaleRoute()
 
+useSeoMeta({
+  title: t('about.title'),
+  description: t('about.description'),
+})
+
+defineOgImage('MyOgImageTakumi', {
+  title: t('about.title'),
+  description: t('about.description'),
+})
+
 const values = [
   t('about.values.clear'),
   t('about.values.careful'),

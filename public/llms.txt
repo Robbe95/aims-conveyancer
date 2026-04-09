@@ -1,0 +1,19 @@
+# Aimee Summers | UK Conveyancing
+
+> Friendly, reliable UK conveyancing support from offer to completion. Clear communication, careful legal work, and honest timelines.
+
+Canonical Origin: https://aimeesummers.co.uk
+
+## LLM Resources
+
+- [sitemap.xml](/sitemap.xml)
+  XML sitemap for search engines and crawlers.
+- [robots.txt](/robots.txt)
+  Crawler rules and permissions.
+
+## Pages
+
+- /: Aimee Summers — Friendly, reliable UK conveyancing support from offer to completion.
+- /about: About Me — Personal, practical conveyancing support built around clear communication.
+- /contact: Contact — Fast ways to reach me and start your conveyancing journey.
+- /guide: Conveyancing Guide — Your Simple Guide to Buying & Selling (Without the Confusion).

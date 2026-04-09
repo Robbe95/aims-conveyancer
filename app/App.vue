@@ -5,19 +5,18 @@ import {
   Motion,
 } from 'motion-v'
 
-import {
-  useHead,
-  useSeoMeta,
-} from '#app'
+import { useHead } from '#app'
 
 useHead({
-  htmlAttrs: {
-    lang: 'en',
-  },
   link: [
     {
       href: '/favicon.ico',
       rel: 'icon',
+    },
+    {
+      href: '/apple-touch-icon.png',
+      rel: 'apple-touch-icon',
+      sizes: '180x180',
     },
   ],
   meta: [
@@ -26,17 +25,6 @@ useHead({
       content: 'width=device-width, initial-scale=1',
     },
   ],
-})
-
-const title = 'Aimee Summers | UK Conveyancing'
-const description = 'Friendly, reliable UK conveyancing support from offer to completion. Clear communication, careful legal work, and honest timelines.'
-
-useSeoMeta({
-  title,
-  description,
-  ogDescription: description,
-  ogTitle: title,
-  twitterCard: 'summary_large_image',
 })
 
 const pageInitial = {
