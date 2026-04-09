@@ -65,7 +65,7 @@ const {
       <UIDivider />
     </MotionFadeIn>
     <MotionFadeIn :delay="0.55">
-      <NavMeeting />
+      <NavMeeting class="w-full" />
     </MotionFadeIn>
     <MotionFadeIn :delay="0.65">
       <NavSocials />

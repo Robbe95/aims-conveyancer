@@ -18,10 +18,10 @@ const isTop = computed<boolean>(() => scroll.isTop.value)
 <template>
   <header
     :class="{
-      'bg-neutral-950/80 px-2': !isTop,
+      'bg-neutral-950/80': !isTop,
       'bg-transparent': isTop,
     }"
-    class="sticky top-0 z-50 rounded-md py-1 backdrop-blur-lg duration-200"
+    class="sticky top-0 z-50 rounded-md py-1 backdrop-blur-lg duration-300"
   >
     <div class="flex items-start justify-between gap-3">
       <h1

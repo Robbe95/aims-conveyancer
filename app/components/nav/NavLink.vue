@@ -47,12 +47,9 @@ const props = defineProps<Props>()
         :name="props.icon ?? `material-symbols:chevron-right`"
         :class="{
           'opacity-100': isActive,
+          'opacity-50 group-hover:opacity-100 sm:opacity-0': !isActive,
         }"
-        class="
-          opacity-100 duration-200
-          group-hover:opacity-100
-          sm:opacity-0
-        "
+        class="opacity-100 duration-200"
       />
     </template>
   </NuxtLinkLocale>

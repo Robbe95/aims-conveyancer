@@ -13,6 +13,7 @@
   "contact.cta.schedule": "Schedule a 30-minute call",
   "contact.cta.whatsapp": "Message on WhatsApp",
   "contact.description": "Fast ways to reach me and start your conveyancing journey.",
+  "contact.email": "You can always just send me an email!",
   "contact.intro": "Choose whichever method feels easiest for you. I will respond clearly, quickly, and with practical next steps.",
   "contact.socials.facebook": "Facebook",
   "contact.socials.heading": "Or connect on social media",
@@ -121,7 +122,11 @@
   "nav.guide_description": "Interactive conveyancing guide",
   "nav.home": "Aimee Summers",
   "nav.schedule_a_meeting": "Schedule a meeting",
+  "nav.socials.copy_email": "Copy email",
+  "nav.socials.email_copied": "Email copied!",
+  "nav.socials.email_copied_desc": "The email address is now on your clipboard, ready to paste.",
   "nav.socials.link_to_facebook": "Link to facebook",
   "nav.socials.link_to_instagram": "Link to instagram",
-  "nav.socials.link_to_whatsapp": "Link to whatsapp"
+  "nav.socials.link_to_whatsapp": "Link to whatsapp",
+  "nav.socials.open_email_client": "Open email client"
 }
