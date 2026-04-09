@@ -11,7 +11,7 @@ import ContentWrapper from '~/components/content-wrapper/ContentWrapper.vue'
     "
   >
     <BackgroundImage class="absolute top-0 left-0" />
-    <ContentWrapper>
+    <ContentWrapper class="max-w-500">
       <slot />
     </ContentWrapper>
   </div>

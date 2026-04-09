@@ -29,9 +29,10 @@ const {
       <UButton
         :to="FACEBOOK_URL"
         :name="t('nav.socials.link_to_facebook')"
-        :label="t('nav.socials.link_to_facebook')"
+        :aria-label="t('nav.socials.link_to_facebook')"
         icon="ic:baseline-facebook"
         size="lg"
+
         color="neutral"
         variant="ghost"
         target="_blank"
@@ -39,7 +40,7 @@ const {
       <UButton
         :to="INSTAGRAM_URL"
         :name="t('nav.socials.link_to_instagram')"
-        :label="t('nav.socials.link_to_instagram')"
+        :aria-label="t('nav.socials.link_to_instagram')"
         icon="mdi:instagram"
         size="lg"
         color="neutral"
@@ -49,7 +50,7 @@ const {
       <UButton
         :to="WHATSAPP_URL"
         :name="t('nav.socials.link_to_whatsapp')"
-        :label="t('nav.socials.link_to_whatsapp')"
+        :aria-label="t('nav.socials.link_to_whatsapp')"
         icon="ic:baseline-whatsapp"
         size="lg"
         color="neutral"

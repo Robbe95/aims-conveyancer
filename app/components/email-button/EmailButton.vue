@@ -38,7 +38,7 @@ function onCopyEmail(): void {
     <UButton
       :name="t('nav.socials.open_email_client')"
       :to="`mailto:${EMAIL_ADDRESS}`"
-      :label="t('nav.socials.open_email_client')"
+      :aria-label="t('nav.socials.open_email_client')"
       icon="cuida:open-in-new-tab-outline"
       size="sm"
       class="flex-none text-right duration-200"
@@ -60,7 +60,7 @@ function onCopyEmail(): void {
       <UButton
         v-if="!copied"
         :name="t('nav.socials.copy_email')"
-        :label="t('nav.socials.copy_email')"
+        :aria-label="t('nav.socials.copy_email')"
         icon="ic:baseline-content-copy"
         size="sm"
         class="flex-none text-right duration-200"
@@ -71,7 +71,7 @@ function onCopyEmail(): void {
       <UButton
         v-else
         :name="t('nav.socials.copy_email')"
-        :label="t('nav.socials.copy_email')"
+        :aria-label="t('nav.socials.copy_email')"
         icon="ic:baseline-check"
         size="sm"
         class="flex-none text-right duration-200"
