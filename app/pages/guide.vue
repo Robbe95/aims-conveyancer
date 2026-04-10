@@ -12,13 +12,13 @@ const {
 } = useI18n()
 
 useSeoMeta({
-  title: t('guide.title'),
-  description: t('guide.description'),
+  title: t('nav.guide'),
+  description: t('nav.guide_description'),
 })
 
 defineOgImage('MyOgImageTakumi', {
-  title: t('guide.title'),
-  description: t('guide.description'),
+  title: t('nav.guide'),
+  description: t('nav.guide_description'),
 })
 </script>
 

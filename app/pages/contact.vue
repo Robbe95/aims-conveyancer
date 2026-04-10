@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import EmailButton from '~/components/email-button/EmailButton.vue'
 import MeetingButton from '~/components/meeting-button/MeetingButton.vue'
-import MotionScaleIn from '~/components/motion/MotionScaleIn.vue'
 import MotionSlideUp from '~/components/motion/MotionSlideUp.vue'
 import UIColumn from '~/components/ui/UIColumn.vue'
 import UIContentTitle from '~/components/ui/UIContentTitle.vue'
@@ -46,6 +45,31 @@ defineOgImage('MyOgImageTakumi', {
         {{ t('contact.intro') }}
       </UIText>
     </MotionSlideUp>
+    <MotionSlideUp :delay="0.25">
+      <UButton
+        :to="WHATSAPP_URL"
+        target="_blank"
+        rel="noopener noreferrer"
+        color="neutral"
+        size="lg"
+        variant="solid"
+        class="
+          w-full text-center
+          md:w-auto
+        "
+        trailing-icon="ic:baseline-whatsapp"
+      >
+        <span class="flex w-full items-center justify-center">
+          {{ t('contact.cta.whatsapp') }}
+        </span>
+      </UButton>
+    </MotionSlideUp>
+
+    <MotionSlideUp :delay="0.35">
+      <UIText tone="soft">
+        {{ t('contact.meeting_intro') }}
+      </UIText>
+    </MotionSlideUp>
 
     <div
       class="
@@ -53,34 +77,14 @@ defineOgImage('MyOgImageTakumi', {
         md:flex-row
       "
     >
-      <MotionScaleIn :delay="0.25">
+      <MotionSlideUp :delay="0.45">
         <MeetingButton
           class="
             w-full
             md:w-auto
           "
         />
-      </MotionScaleIn>
-
-      <MotionScaleIn :delay="0.35">
-        <UButton
-          :to="WHATSAPP_URL"
-          target="_blank"
-          rel="noopener noreferrer"
-          color="neutral"
-          size="lg"
-          variant="solid"
-          class="
-            w-full text-center
-            md:w-auto
-          "
-          trailing-icon="ic:baseline-whatsapp"
-        >
-          <span class="flex w-full items-center justify-center">
-            {{ t('contact.cta.whatsapp') }}
-          </span>
-        </UButton>
-      </MotionScaleIn>
+      </MotionSlideUp>
     </div>
     <MotionSlideUp :delay="0.55">
       <UIText

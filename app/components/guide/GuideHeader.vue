@@ -9,6 +9,6 @@ const {
 <template>
   <UIContentTitle
     :title="t('guide.title')"
-    :description="t('guide.description')"
+    :description="t('nav.guide_description')"
   />
 </template>
