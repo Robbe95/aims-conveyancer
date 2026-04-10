@@ -35,6 +35,7 @@ const values = [
   <UIColumn
     tag="section"
     gap="6"
+    class="relative"
   >
     <UIContentTitle
       :title="t('about.title')"
@@ -111,7 +112,7 @@ const values = [
             src="/me.jpg"
             alt="Picture of Aimee Summers, conveyancer"
             class="
-              relative size-auto rounded-lg border-4 border-primary
+              relative size-auto rounded-xl border-4 border-primary
               lg:max-w-80
             "
           />

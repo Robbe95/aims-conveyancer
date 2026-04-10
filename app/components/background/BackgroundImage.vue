@@ -49,15 +49,6 @@ onMounted(() => {
     <!-- Dark overlay for contrast -->
     <div class="absolute inset-0 z-0 bg-neutral-950/60" />
 
-    <!-- Center Gradient Glow -->
-    <div
-      class="
-        absolute top-1/2 left-1/2 z-10 h-[60vw] max-h-200 w-[60vw] max-w-200
-        -translate-1/2 rounded-full bg-emerald-500/20 blur-[120px]
-        transition-opacity duration-5000
-      "
-    />
-
     <!-- Floating Dots -->
     <div class="absolute inset-0 z-10 overflow-hidden">
       <Motion

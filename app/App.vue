@@ -28,21 +28,18 @@ useHead({
 })
 
 const pageInitial = {
-  filter: 'blur(8px)',
   opacity: 0,
   scale: 1,
   y: 26,
 }
 
 const pageAnimate = {
-  filter: 'blur(0px)',
   opacity: 1,
   scale: 1,
   y: 0,
 }
 
 const pageExit = {
-  filter: 'blur(4px)',
   opacity: 0,
   scale: 1.01,
   y: -18,
@@ -55,24 +52,26 @@ const pageTransition = {
 </script>
 
 <template>
-  <UApp>
-    <UMain>
-      <NuxtLayout>
-        <NuxtPage v-slot="{ Component, route }">
-          <AnimatePresence mode="popLayout">
-            <Motion
-              :key="route.path"
-              :initial="pageInitial"
-              :animate="pageAnimate"
-              :exit="pageExit"
-              :transition="pageTransition"
-              class="will-change-transform"
-            >
-              <component :is="Component" />
-            </Motion>
-          </AnimatePresence>
-        </NuxtPage>
-      </NuxtLayout>
-    </UMain>
-  </UApp>
+  <div class="h-dvh overflow-hidden">
+    <UApp>
+      <UMain>
+        <NuxtLayout>
+          <NuxtPage v-slot="{ Component, route }">
+            <AnimatePresence mode="popLayout">
+              <Motion
+                :key="route.path"
+                :initial="pageInitial"
+                :animate="pageAnimate"
+                :exit="pageExit"
+                :transition="pageTransition"
+                class="will-change-transform"
+              >
+                <component :is="Component" />
+              </Motion>
+            </AnimatePresence>
+          </NuxtPage>
+        </NuxtLayout>
+      </UMain>
+    </UApp>
+  </div>
 </template>

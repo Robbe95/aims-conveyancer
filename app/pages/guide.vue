@@ -25,7 +25,7 @@ defineOgImage('MyOgImageTakumi', {
 <template>
   <UIColumn
     tag="section"
-    gap="4"
+    gap="6"
     class="relative"
   >
     <GuideHeader />

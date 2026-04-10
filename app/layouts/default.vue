@@ -6,12 +6,12 @@ import ContentWrapper from '~/components/content-wrapper/ContentWrapper.vue'
 <template>
   <div
     class="
-      relative flex min-h-dvh w-full items-stretch justify-center
+      relative flex h-dvh w-full items-stretch justify-center overflow-hidden
       lg:h-screen lg:items-center
     "
   >
-    <BackgroundImage class="absolute top-0 left-0" />
-    <ContentWrapper class="max-w-500">
+    <BackgroundImage class="absolute top-0 left-0 max-h-dvh overflow-hidden" />
+    <ContentWrapper class="max-h-dvh max-w-500 overflow-hidden">
       <slot />
     </ContentWrapper>
   </div>

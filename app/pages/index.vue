@@ -34,14 +34,12 @@ const SERVICES = [
   <UIColumn
     tag="section"
     gap="6"
-    class="text-white"
+    class="relative text-white"
   >
-    <MotionSlideUp :delay="0.05">
-      <UIContentTitle
-        :title="t('home.title')"
-        :description="t('home.description')"
-      />
-    </MotionSlideUp>
+    <UIContentTitle
+      :title="t('home.title')"
+      :description="t('home.description')"
+    />
 
     <MotionSlideUp :delay="0.15">
       <UIText>
