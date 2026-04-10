@@ -31,9 +31,12 @@ function onCopyEmail(): void {
     <p
       :name="EMAIL_ADDRESS"
       :class="{
-        'text-sm': !props.isMedium,
+        'text-sm!': !props.isMedium,
       }"
-      class="text-neutral-400"
+      class="
+        text-sm text-neutral-400
+        lg:text-base
+      "
     >
       {{ EMAIL_ADDRESS }}
     </p>

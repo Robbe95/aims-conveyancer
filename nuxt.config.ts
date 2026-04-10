@@ -12,7 +12,6 @@ import { cryptoUuidPolyfillScript } from './app/utils/cryptoUuidPolyfillScript'
 
 export default defineNuxtConfig({
   compatibilityDate: '2025-01-15',
-
   app: {
     head: {
       script: [
@@ -42,6 +41,7 @@ export default defineNuxtConfig({
   },
   experimental: {
     nitroAutoImports: true,
+    payloadExtraction: false,
     typedPages: true,
   },
   i18n: {
