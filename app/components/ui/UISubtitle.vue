@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import UIDivider from './UIDivider.vue'
+
 withDefaults(defineProps<{
   tag?: string
 }>(), {
@@ -9,8 +11,9 @@ withDefaults(defineProps<{
 <template>
   <component
     :is="tag"
-    class="text-2xl font-semibold"
+    class="text-lg font-semibold text-primary"
   >
     <slot />
   </component>
+  <UIDivider class="my-2" />
 </template>

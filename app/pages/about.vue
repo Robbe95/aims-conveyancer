@@ -26,6 +26,8 @@ const values = [
   t('about.values.clear'),
   t('about.values.careful'),
   t('about.values.timely'),
+  t('about.values.whatsapp'),
+
 ]
 </script>
 
@@ -42,7 +44,7 @@ const values = [
     <UIColumn
       gap="6"
       class="
-        flex-col
+        flex-col justify-between
         lg:flex-row!
       "
     >
@@ -103,16 +105,18 @@ const values = [
         </MotionSlideUp>
       </UIColumn>
 
-      <MotionSlideUp :delay="0.3">
-        <NuxtImg
-          src="/me.jpg"
-          alt="Picture of Aimee Summers, conveyancer"
-          class="
-            relative size-auto w-full rounded-lg object-contain
-            lg:min-w-sm
-          "
-        />
-      </MotionSlideUp>
+      <div class="relative flex justify-end">
+        <MotionSlideUp :delay="0.3">
+          <NuxtImg
+            src="/me.jpg"
+            alt="Picture of Aimee Summers, conveyancer"
+            class="
+              relative size-auto rounded-lg border-4 border-primary
+              lg:max-w-80
+            "
+          />
+        </MotionSlideUp>
+      </div>
     </UIColumn>
   </UIColumn>
 </template>

@@ -18,6 +18,7 @@ const toneClassMap = {
   <component
     :is="tag"
     :class="toneClassMap[tone]"
+    class="max-w-prose text-pretty"
   >
     <slot />
   </component>

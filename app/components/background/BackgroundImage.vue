@@ -53,8 +53,8 @@ onMounted(() => {
     <div
       class="
         absolute top-1/2 left-1/2 z-10 h-[60vw] max-h-200 w-[60vw] max-w-200
-        -translate-1/2 animate-pulse rounded-full bg-emerald-500/20 blur-[120px]
-        transition-opacity duration-1000
+        -translate-1/2 rounded-full bg-emerald-500/20 blur-[120px]
+        transition-opacity duration-5000
       "
     />
 

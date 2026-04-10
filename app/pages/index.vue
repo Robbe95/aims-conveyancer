@@ -19,11 +19,13 @@ defineOgImage('MyOgImageTakumi', {
   description: t('home.description'),
 })
 
-const services = [
+const SERVICES = [
   t('home.services.sales'),
   t('home.services.first_time_buyers'),
   t('home.services.remortgages'),
   t('home.services.transfer_of_equity'),
+  t('home.services.bridging_loans'),
+  t('home.services.auctions'),
   t('home.services.updates'),
 ]
 </script>
@@ -55,7 +57,7 @@ const services = [
       </MotionSlideUp>
       <ul class="flex list-none flex-col gap-2 pl-0">
         <MotionSlideUp
-          v-for="(service, index) in services"
+          v-for="(service, index) in SERVICES"
           :key="service"
           :delay="0.3 + index * 0.07"
           tag="li"
@@ -95,8 +97,7 @@ const services = [
           to="/contact"
         >
           {{ t('home.cta.contact') }}
-        </NuxtLink>
-        {{ t('home.cta.end') }}
+        </NuxtLink>{{ t('home.cta.end') }}
       </UIText>
     </MotionSlideUp>
   </UIColumn>

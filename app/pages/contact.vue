@@ -82,13 +82,6 @@ defineOgImage('MyOgImageTakumi', {
         </UButton>
       </MotionScaleIn>
     </div>
-
-    <MotionSlideUp :delay="0.45">
-      <UIText tone="soft">
-        {{ t('contact.email') }}
-      </UIText>
-      <EmailButton />
-    </MotionSlideUp>
     <MotionSlideUp :delay="0.55">
       <UIText
         tone="soft"
@@ -126,6 +119,16 @@ defineOgImage('MyOgImageTakumi', {
           {{ t('contact.socials.instagram') }}
         </UButton>
       </UIRow>
+    </MotionSlideUp>
+
+    <MotionSlideUp :delay="0.45">
+      <UIText tone="soft">
+        {{ t('contact.email') }}
+      </UIText>
+      <EmailButton
+        class="mt-2"
+        is-medium
+      />
     </MotionSlideUp>
   </UIColumn>
 </template>

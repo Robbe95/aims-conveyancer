@@ -26,7 +26,7 @@ const isTop = computed<boolean>(() => scroll.isTop.value)
     <div class="flex items-start justify-between gap-3">
       <h1
         class="
-          text-3xl/tight text-primary
+          text-3xl/tight font-semibold text-primary
           sm:text-4xl
           lg:text-5xl
         "

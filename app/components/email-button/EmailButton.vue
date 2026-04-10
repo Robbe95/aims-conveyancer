@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { EMAIL_ADDRESS } from '~/constants/socials.constant'
 
+const props = defineProps<{
+  isMedium?: boolean
+}>()
 const {
   t,
 } = useI18n()
@@ -27,11 +30,10 @@ function onCopyEmail(): void {
   >
     <p
       :name="EMAIL_ADDRESS"
-      color="neutral"
-      variant="ghost"
-      icon="ic:baseline-email"
-      target="_blank"
-      class="text-sm text-neutral-400"
+      :class="{
+        'text-sm': !props.isMedium,
+      }"
+      class="text-neutral-400"
     >
       {{ EMAIL_ADDRESS }}
     </p>
