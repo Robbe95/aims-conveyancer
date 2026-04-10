@@ -22,6 +22,12 @@ export default defineNuxtConfig({
           tagPosition: 'head',
         },
       ],
+      meta: [
+        {
+          name: 'google-site-verification',
+          content: '53eUekBlHZaU8i0ArxiB05TNxtUxqNiWro4UYgGoszs',
+        },
+      ],
     },
   },
 
