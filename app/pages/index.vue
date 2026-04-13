@@ -10,7 +10,7 @@ const {
 } = useI18n()
 
 useSeoMeta({
-  title: t('home.title'),
+  title: t('seo.home.title'),
   description: t('home.description'),
 })
 
