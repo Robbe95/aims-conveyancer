@@ -80,6 +80,8 @@ export default defineNuxtConfig({
     'nuxt-calendly',
     'motion-v/nuxt',
     '@vueuse/nuxt',
+    '@vercel/analytics',
+    '@vercel/speed-insights',
   ],
 
   nitro: {
